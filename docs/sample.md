@@ -80,3 +80,9 @@ end
 
 Insert.merged_data_write_to_csv(Extraction.material_hash, Extraction.recipe_hash)
 Insert.to_g
+
+
+*リファクタリング*
+1. csv取る
+1. "パック", "少々"などを別ファイルに分ける
+1. https://www.d-wood.com/blog/2020/07/17_11843.html
