@@ -1,0 +1,15 @@
+current directory: /Users/jun/div/dely-questions/vendor/bundle/ruby/2.6.0/gems/mathn-0.1.0/ext/mathn/rational
+/Users/jun/.rvm/rubies/ruby-2.6.5/bin/ruby -I /Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20201020-18310-1amfkfc.rb extconf.rb
+creating Makefile
+
+current directory: /Users/jun/div/dely-questions/vendor/bundle/ruby/2.6.0/gems/mathn-0.1.0/ext/mathn/rational
+make "DESTDIR=" clean
+
+current directory: /Users/jun/div/dely-questions/vendor/bundle/ruby/2.6.0/gems/mathn-0.1.0/ext/mathn/rational
+make "DESTDIR="
+compiling rational.c
+linking shared-object mathn/rational.bundle
+
+current directory: /Users/jun/div/dely-questions/vendor/bundle/ruby/2.6.0/gems/mathn-0.1.0/ext/mathn/rational
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 rational.bundle ./.gem.20201020-18310-1ed09q9/mathn

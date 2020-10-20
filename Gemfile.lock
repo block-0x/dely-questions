@@ -3,6 +3,7 @@ GEM
   specs:
     csv (3.1.7)
     json (2.3.1)
+    mathn (0.1.0)
 
 PLATFORMS
   ruby
@@ -10,6 +11,7 @@ PLATFORMS
 DEPENDENCIES
   csv (~> 3.0)
   json (~> 2.2)
+  mathn (~> 0.1.0)
 
 RUBY VERSION
    ruby 2.6.5p114
