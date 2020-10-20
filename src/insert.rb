@@ -1,7 +1,5 @@
 require './extraction.rb'
 require "csv"
-# require "mathn"
-# include Math
 
 class Insert
   def self.merged_data_write_to_csv(material_hash, recipe_hash)
