@@ -14,9 +14,8 @@ class Extraction
       @recipe_hash = JSON.load(j)
     end
   end
-
 end
 
-Extraction.material_hash
-Extraction.recipe_hash
+# Extraction.material_hash
+# Extraction.recipe_hash
 # Extraction.merged_data

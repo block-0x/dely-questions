@@ -1,6 +1,4 @@
 require "./extraction.rb"
-require 'active_support'
-require 'active_support/core_ext'
 
 class Constructor
   def self.output(material_hash, recipe_hash)
