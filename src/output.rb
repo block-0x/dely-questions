@@ -1,4 +1,4 @@
-require_relative "insert.rb"
+require_relative 'insert.rb'
 
 class Output
   def self.output(sodium_intake_sum, calorie_intake_sum)
