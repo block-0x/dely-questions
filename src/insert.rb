@@ -1,12 +1,12 @@
-require_relative "extraction.rb"
+require_relative "input_json.rb"
 require "csv"
 
 class Insert
-  def self.merged_data_write_to_csv(material_hash, recipe_hash)
+  def self.merged_data_write_to_csv(material_data, recipe_data)
   	@merged_hash = []
     CSV.open('./../data/sample.csv','w') do |file|
-      material_hash.each_with_index do |material, i|
-        @merged_data = material.merge(recipe_hash[i])
+      material_data.each_with_index do |material, i|
+        @merged_data = material.merge(recipe_data[i])
         name = @merged_data["材料名"]
         material_calorie = @merged_data["100gあたりのカロリー"]
         material_sodium = @merged_data["100gあたりの食塩相当量"]
@@ -47,7 +47,7 @@ class Insert
     end
   end
 
-  def self.sodium_intakes_sum(material_hash)
+  def self.sodium_intakes_sum(material_data)
     sodium_sum = 0
     @merged_hash.each_with_index do |merged_hash, i|
       sodium_in_100g = merged_hash["100gあたりの食塩相当量"].to_f
@@ -57,7 +57,7 @@ class Insert
     sodium_sum
   end
 
-  def self.calorie_intakes_sum(material_hash)
+  def self.calorie_intakes_sum(material_data)
     calorie_sum = 0
     @merged_hash.each_with_index do |merged_hash, i|
       calorie_in_100g = merged_hash["100gあたりのカロリー"].to_f
@@ -68,8 +68,9 @@ class Insert
   end
 end
 
-# Insert.merged_data_write_to_csv(Extraction.material_hash, Extraction.recipe_hash)
-# Insert.unit_normalization
-# Insert.sodium_intake_sum(Extraction.material_hash)
-# Insert.calorie_intake_sum(Extraction.material_hash)
-
+if __FILE__ == $0
+  Insert.merged_data_write_to_csv(Extraction.material_data, Extraction.recipe_data)
+  Insert.unit_normalization
+  Insert.sodium_intake_sum(Extraction.material_data)
+  Insert.calorie_intake_sum(Extraction.material_data)
+end
