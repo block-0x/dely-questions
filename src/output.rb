@@ -2,7 +2,7 @@ require_relative "insert.rb"
 
 class Output
   def self.output(sodium_intake_sum, calorie_intake_sum)
-    puts "2人前のカロリーは#{calorie_intake_sum} kcalで塩分は#{sodium_intake_sum} gです"
+  	puts "===================================================\n\n\s\s2人前のカロリーは#{calorie_intake_sum} kcalで塩分は#{sodium_intake_sum} gです\n\n==================================================="
   end
 end
 
