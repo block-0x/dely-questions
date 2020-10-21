@@ -1,29 +1,21 @@
 require_relative "input_json.rb"
-require "csv"
 
 class Insert
-  def self.merged_data_write_to_csv(material_data, recipe_data)
+  def self.material_data_recipe_data_merged(material_data, recipe_data)
   	@merged_hash = []
-    CSV.open('./../data/sample.csv','w') do |file|
-      material_data.each_with_index do |material, i|
-        @merged_data = material.merge(recipe_data[i])
-        name = @merged_data["材料名"]
-        material_calorie = @merged_data["100gあたりのカロリー"]
-        material_sodium = @merged_data["100gあたりの食塩相当量"]
-        amount_to_use = @merged_data["2人前の使用量"]
-        material_note = @merged_data["備考"]
-        file << ["#{name}", "#{material_calorie}", "#{material_sodium}", "#{amount_to_use}", "#{material_note}"]
-        @merged_hash.push(@merged_data)
-      end
+    material_data.each_with_index do |material, i|
+      @merged_data = material.merge(recipe_data[i])
+      @merged_hash.push(@merged_data)
     end
+    @merged_hash
   end
 
   def self.unit_normalization
   	@portions = []
-    material_csv_data = CSV.foreach('./../data/sample.csv', headers: false) do |data|
-      amount_to_use = data[3]
-      material_note = data[4]
-      unless material_note.empty?
+    @merged_hash.each do |data|
+      amount_to_use = data["2人前の使用量"]
+      material_note = data["備考"]
+      unless material_note.nil?
         if amount_to_use.include?("パック")
           num = amount_to_use.sub("パック", "").to_f
           regular = material_note.sub(/1パックあたり/, '').sub(/g/, '')
@@ -37,7 +29,7 @@ class Insert
         elsif amount_to_use.include?("小さじ1")
           num = amount_to_use.gsub(/[^\d+\/]/, "")
           num_w = Rational(num).to_f
-          regular = data[4].sub(/小さじ1あたり/, '').sub(/g/, '').to_f
+          regular = material_note.sub(/小さじ1あたり/, '').sub(/g/, '').to_f
           @portion = regular * num_w
         end
       else
@@ -69,7 +61,7 @@ class Insert
 end
 
 if __FILE__ == $0
-  Insert.merged_data_write_to_csv(Extraction.material_data, Extraction.recipe_data)
+  Insert.material_data_recipe_data_merged(Extraction.material_data, Extraction.recipe_data)
   Insert.unit_normalization
   Insert.sodium_intake_sum(Extraction.material_data)
   Insert.calorie_intake_sum(Extraction.material_data)
