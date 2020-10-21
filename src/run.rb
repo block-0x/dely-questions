@@ -1,6 +1,5 @@
 require_relative "output.rb"
 
-
 Insert.merged_data_write_to_csv(Input.material_hash, Input.recipe_hash)
 Insert.unit_normalization
 sodium_sum = Insert.sodium_intakes_sum(Input.material_hash)

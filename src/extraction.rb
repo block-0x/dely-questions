@@ -1,6 +1,6 @@
 require "json"
 
-class Extraction
+class Input
   def self.material_hash
     material_json_path = "./../data/material.json"
     File.open(material_json_path) do |j|
@@ -16,6 +16,6 @@ class Extraction
   end
 end
 
-# Extraction.material_hash
-# Extraction.recipe_hash
-# Extraction.merged_data
+# Input.material_hash
+# Input.recipe_hash
+# Input.merged_data

@@ -1,11 +1,10 @@
-require "./extraction"
+require_relative "extraction.rb"
 require "csv"
 
 class Insert
   def self.merged_data_write_to_csv(material_hash, recipe_hash)
   	@merged_hash = []
     CSV.open('./../data/sample.csv','w') do |file|
-      # file << ["name", "material_calorie", "material_sodium", "amount_to_use", "material_note"]
       material_hash.each_with_index do |material, i|
         @merged_data = material.merge(recipe_hash[i])
         name = @merged_data["材料名"]
@@ -36,10 +35,6 @@ class Insert
           regular = material_note.sub(/大さじ1あたり/, '').sub(/g/, '')
           @portion = (regular * num).to_f
         elsif amount_to_use.include?("小さじ1")
-        # arrey
-          # num = amount_to_use.gsub(/[^\d+\/]/, "").sub("/", ',').split(/,/, 1)
-          # num_eval = eval("{#{num}}")
-        # not arrey
           num = amount_to_use.gsub(/[^\d+\/]/, "")
           num_w = Rational(num).to_f
           regular = data[4].sub(/小さじ1あたり/, '').sub(/g/, '').to_f
@@ -52,32 +47,29 @@ class Insert
     end
   end
 
-  def self.sodium_intake_sum(material_hash)
-  	# material_hash.each_with_index do |material, i|
-    #  p @portions.map{|item| item * 2}
-    #  @portions.zip(point).map{|n,p| n*p}.sum
-    @sodium_intake_sum = 0
+  def self.sodium_intakes_sum(material_hash)
+    sodium_sum = 0
     @merged_hash.each_with_index do |merged_hash, i|
       sodium_in_100g = merged_hash["100gあたりの食塩相当量"].to_f
-      sodium_intake = sodium_in_100g * @portions[i] * 0.01
-      @sodium_intake_sum += sodium_intake
+      sodium_intakes = sodium_in_100g * @portions[i] * 0.01
+      sodium_sum += sodium_intakes
     end
-    p @sodium_intake_sum
+    sodium_sum
   end
 
-  def self.calorie_intake_sum(material_hash)
-    @calorie_intake_sum = 0
+  def self.calorie_intakes_sum(material_hash)
+    calorie_sum = 0
     @merged_hash.each_with_index do |merged_hash, i|
       calorie_in_100g = merged_hash["100gあたりのカロリー"].to_f
-      calorie_intake = calorie_in_100g * @portions[i] * 0.01
-      @calorie_intake_sum += calorie_intake
+      calorie_intakes = calorie_in_100g * @portions[i] * 0.01
+      calorie_sum += calorie_intakes
     end
-    p @calorie_intake_sum
+    calorie_sum
   end
 end
 
-Insert.merged_data_write_to_csv(Extraction.material_hash, Extraction.recipe_hash)
-Insert.unit_normalization
-Insert.sodium_intake_sum(Extraction.material_hash)
-Insert.calorie_intake_sum(Extraction.material_hash)
+# Insert.merged_data_write_to_csv(Extraction.material_hash, Extraction.recipe_hash)
+# Insert.unit_normalization
+# Insert.sodium_intake_sum(Extraction.material_hash)
+# Insert.calorie_intake_sum(Extraction.material_hash)
 

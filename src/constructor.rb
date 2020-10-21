@@ -1,4 +1,4 @@
-require "./extraction.rb"
+require_relative "extraction.rb"
 
 class Constructor
   def self.output(material_hash, recipe_hash)
