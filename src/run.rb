@@ -1,8 +1,5 @@
 require_relative "output.rb"
-# require 'logger'
-# file = File.open('./../logfile.log')
-# logger = Logger.new(file)
-# logger << "add message"
+require_relative "log.rb"
 
 if __FILE__ == $0
   input = Input.new()

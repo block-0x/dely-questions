@@ -1,2 +1,30 @@
 # Logfile created on 2020-10-21 23:36:28 +0900 by logger.rb/66358
-add message
+add messageW, [2020-10-23T01:58:30.712748 #4344]  WARN -- : Nothing to do!
+F, [2020-10-23T01:58:30.718186 #4344] FATAL -- : Caught exception; exiting
+F, [2020-10-23T01:58:30.718254 #4344] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+run.rb:13:in `foreach'
+run.rb:13:in `<main>'
+W, [2020-10-23T01:58:45.214577 #4353]  WARN -- : Nothing to do!
+F, [2020-10-23T01:58:45.214690 #4353] FATAL -- : Caught exception; exiting
+F, [2020-10-23T01:58:45.214715 #4353] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+run.rb:13:in `foreach'
+run.rb:13:in `<main>'
+W, [2020-10-23T01:58:48.154050 #4355]  WARN -- : Nothing to do!
+F, [2020-10-23T01:58:48.154164 #4355] FATAL -- : Caught exception; exiting
+F, [2020-10-23T01:58:48.154188 #4355] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+run.rb:13:in `foreach'
+run.rb:13:in `<main>'
+W, [2020-10-23T02:01:49.209451 #4477]  WARN -- : Nothing to do!
+F, [2020-10-23T02:01:49.210035 #4477] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:01:49.210099 #4477] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/src/log.rb:12:in `foreach'
+/Users/jun/div/dely-questions/src/log.rb:12:in `<top (required)>'
+run.rb:2:in `require_relative'
+run.rb:2:in `<main>'
+W, [2020-10-23T02:01:54.551999 #4480]  WARN -- : Nothing to do!
+F, [2020-10-23T02:01:54.552102 #4480] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:01:54.552127 #4480] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/src/log.rb:12:in `foreach'
+/Users/jun/div/dely-questions/src/log.rb:12:in `<top (required)>'
+run.rb:2:in `require_relative'
+run.rb:2:in `<main>'
