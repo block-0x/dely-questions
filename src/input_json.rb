@@ -1,3 +1,6 @@
+#!/usr/bin/env ruby
+# 値の取得
+
 require 'json'
 
 class Input
@@ -22,10 +25,4 @@ class Input
     File.open(@recipe_json_path) { |j| JSON.load(j) }
   end
 
-end
-
-if __FILE__ == $0
-  input = Input.new
-  p input.material_data
-  p input.recipe_data
 end

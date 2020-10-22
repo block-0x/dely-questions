@@ -1,12 +1,12 @@
-require 'logger'
-logger = Logger.new(('./../logfile.log'))
-logger.level = Logger::WARN
+#!/usr/bin/env ruby
+# ログ
 
+require 'logger'
+logger = Logger.new('./../log/logfile.log')
+logger.level = Logger::WARN
 logger.debug("Created logger")
 logger.info("Program started")
 logger.warn("Nothing to do!")
-
-path = "a_non_existent_file"
 
 begin
   File.foreach(path) do |line|

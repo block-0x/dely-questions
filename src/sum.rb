@@ -1,4 +1,5 @@
-require_relative "normalization.rb"
+#!/usr/bin/env ruby
+# 合計値の計算
 
 class Sum
 
@@ -35,16 +36,4 @@ class Sum
     return @sodium_sum
   end
 
-end
-
-
-if __FILE__ == $0
-  input = Input.new
-  material_data = input.material_data
-  input.recipe_data
-  normalization = Normalization.new(input.material_data, input.recipe_data)
-  normalization.material_data_recipe_data_merged()
-  normalization.unit_normalization_module()
-  sodium_sum = normalization.sodium_sum()
-  calorie_sum = normalization.calorie_sum()
 end

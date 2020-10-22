@@ -1,5 +1,5 @@
 current directory: /Users/jun/div/dely-questions/vendor/bundle/ruby/2.6.0/gems/json-2.3.1/ext/json
-/Users/jun/.rvm/rubies/ruby-2.6.5/bin/ruby -I /Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20201020-51561-1nndua.rb extconf.rb
+/Users/jun/.rvm/rubies/ruby-2.6.5/bin/ruby -I /Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20201023-4727-cipfcm.rb extconf.rb
 creating Makefile
 
 current directory: /Users/jun/div/dely-questions/vendor/bundle/ruby/2.6.0/gems/json-2.3.1/ext/json

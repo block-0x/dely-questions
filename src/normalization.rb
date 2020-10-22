@@ -1,4 +1,5 @@
-require_relative "input_json.rb"
+#!/usr/bin/env ruby
+# 単位の正規化
 
 class Normalization
 
@@ -21,7 +22,7 @@ class Normalization
       @merged_hash = material.merge(@recipe_data[i])
       @merged_data.push(@merged_hash)
     end
-    @merged_data
+    return @merged_data
   end
 
   def unit_normalization_module()
@@ -31,7 +32,7 @@ class Normalization
       nil? || pinch? || pack? || l_spoon? || s_spoon?
       @normalized_amount_data.push(@normalized_amount)
     end
-    @normalized_amount_data
+    return @normalized_amount_data
   end
 
   def nil?()
@@ -73,15 +74,4 @@ class Normalization
     integer_or_fraction?
   end
 
-end
-
-if __FILE__ == $0
-  input = Input.new
-  input.material_data
-  input.recipe_data
-  normalization = Normalization.new(input.material_data, input.recipe_data)
-  normalization.material_data_recipe_data_merged()
-  normalization.unit_normalization_module()
-  sodium_sum = normalization.sodium_sum()
-  calorie_sum = normalization.calorie_sum()
 end

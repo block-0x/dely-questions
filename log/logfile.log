@@ -1,0 +1,84 @@
+# Logfile created on 2020-10-21 23:36:28 +0900 by logger.rb/66358
+add messageW, [2020-10-23T01:58:30.712748 #4344]  WARN -- : Nothing to do!
+F, [2020-10-23T01:58:30.718186 #4344] FATAL -- : Caught exception; exiting
+F, [2020-10-23T01:58:30.718254 #4344] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+run.rb:13:in `foreach'
+run.rb:13:in `<main>'
+W, [2020-10-23T01:58:45.214577 #4353]  WARN -- : Nothing to do!
+F, [2020-10-23T01:58:45.214690 #4353] FATAL -- : Caught exception; exiting
+F, [2020-10-23T01:58:45.214715 #4353] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+run.rb:13:in `foreach'
+run.rb:13:in `<main>'
+W, [2020-10-23T01:58:48.154050 #4355]  WARN -- : Nothing to do!
+F, [2020-10-23T01:58:48.154164 #4355] FATAL -- : Caught exception; exiting
+F, [2020-10-23T01:58:48.154188 #4355] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+run.rb:13:in `foreach'
+run.rb:13:in `<main>'
+W, [2020-10-23T02:01:49.209451 #4477]  WARN -- : Nothing to do!
+F, [2020-10-23T02:01:49.210035 #4477] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:01:49.210099 #4477] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/src/log.rb:12:in `foreach'
+/Users/jun/div/dely-questions/src/log.rb:12:in `<top (required)>'
+run.rb:2:in `require_relative'
+run.rb:2:in `<main>'
+W, [2020-10-23T02:01:54.551999 #4480]  WARN -- : Nothing to do!
+F, [2020-10-23T02:01:54.552102 #4480] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:01:54.552127 #4480] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/src/log.rb:12:in `foreach'
+/Users/jun/div/dely-questions/src/log.rb:12:in `<top (required)>'
+run.rb:2:in `require_relative'
+run.rb:2:in `<main>'
+W, [2020-10-23T02:26:58.834191 #5465]  WARN -- : Nothing to do!
+F, [2020-10-23T02:26:58.839850 #5465] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:26:58.840014 #5465] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/log/log.rb:12:in `foreach'
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:5:in `<main>'
+W, [2020-10-23T02:27:08.607984 #5472]  WARN -- : Nothing to do!
+F, [2020-10-23T02:27:08.608274 #5472] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:27:08.608336 #5472] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/log/log.rb:12:in `foreach'
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:5:in `<main>'
+W, [2020-10-23T02:40:15.103159 #5875]  WARN -- : Nothing to do!
+F, [2020-10-23T02:40:15.104249 #5875] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:40:15.104329 #5875] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/log/log.rb:15:in `foreach'
+/Users/jun/div/dely-questions/log/log.rb:15:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:4:in `<main>'
+W, [2020-10-23T02:40:49.684155 #5891]  WARN -- : Nothing to do!
+F, [2020-10-23T02:40:49.684271 #5891] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:40:49.684296 #5891] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/log/log.rb:15:in `foreach'
+/Users/jun/div/dely-questions/log/log.rb:15:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:4:in `<main>'
+W, [2020-10-23T02:40:51.265160 #5894]  WARN -- : Nothing to do!
+F, [2020-10-23T02:40:51.265254 #5894] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:40:51.265277 #5894] FATAL -- : No such file or directory @ rb_sysopen - a_non_existent_file (Errno::ENOENT)
+/Users/jun/div/dely-questions/log/log.rb:15:in `foreach'
+/Users/jun/div/dely-questions/log/log.rb:15:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:4:in `<main>'
+W, [2020-10-23T02:41:29.208154 #5913]  WARN -- : Nothing to do!
+F, [2020-10-23T02:41:29.208252 #5913] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:41:29.208276 #5913] FATAL -- : undefined local variable or method `path' for main:Object (NameError)
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:4:in `<main>'
+W, [2020-10-23T02:44:23.886405 #5992]  WARN -- : Nothing to do!
+F, [2020-10-23T02:44:23.886524 #5992] FATAL -- : Caught exception; exiting
+F, [2020-10-23T02:44:23.886550 #5992] FATAL -- : undefined local variable or method `path' for main:Object (NameError)
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:4:in `<main>'
