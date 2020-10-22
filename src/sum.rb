@@ -2,9 +2,9 @@ require_relative "normalization.rb"
 
 class Sum
 
-  def initialize(merged_data, normalized_amount_data)
-    @merged_data = merged_data
-    @normalized_amount_data = normalized_amount_data
+  def initialize(normalization_hash)
+    @merged_data = normalization_hash[:merged_data]
+    @normalized_amount_data = normalization_hash[:normalized_amount_data]
     @sodium_sum = 0
     @calorie_sum = 0
     @key =  ["2人前のカロリー", "2人前の塩分"]

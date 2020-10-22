@@ -7,6 +7,10 @@ class Output
     @total_sodium_sum = total_calorie_and_sodium["2人前の塩分"]
   end
 
+  def run()
+    output
+  end
+
   def output()
   	puts "===================================================\n\n\s\s2人前のカロリーは#{@total_calorie_sum} kcalで塩分は#{@total_sodium_sum} gです\n\n==================================================="
   end

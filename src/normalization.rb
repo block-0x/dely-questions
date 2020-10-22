@@ -2,11 +2,18 @@ require_relative "input_json.rb"
 
 class Normalization
 
-  def initialize(material_data, recipe_data)
-    @material_data = material_data
-    @recipe_data = recipe_data
+  def initialize(input_hash)
+    @material_data = input_hash[:material_data]
+    @recipe_data = input_hash[:recipe_data]
     @merged_data = []
     @normalized_amount_data = []
+    @key = [:merged_data, :normalized_amount_data]
+    @value = []
+  end
+
+  def run()
+    @value << material_data_recipe_data_merged << unit_normalization_module
+    [@key, @value].transpose.to_h
   end
 
   def material_data_recipe_data_merged()
