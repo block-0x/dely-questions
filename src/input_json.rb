@@ -1,18 +1,24 @@
 require 'json'
 
 class Input
-  def self.material_data
-    material_json_path = "./../data/material.json"
-    File.open(material_json_path) { |j| JSON.load(j) }
+
+  def initialize()
+    @material_json_path = "./../data/material.json"
+    @recipe_json_path = "./../data/recipe.json"
   end
 
-  def self.recipe_data
-    recipe_json_path = "./../data/recipe.json"
-    File.open(recipe_json_path) { |j| JSON.load(j) }
+  def material_data()
+    File.open(@material_json_path) { |j| JSON.load(j) }
   end
+
+  def recipe_data()
+    File.open(@recipe_json_path) { |j| JSON.load(j) }
+  end
+
 end
 
 if __FILE__ == $0
-  p Input.material_data
-  p Input.recipe_data
+  input = Input.new
+  p input.material_data
+  p input.recipe_data
 end

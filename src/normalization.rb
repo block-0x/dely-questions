@@ -6,7 +6,7 @@ class Normalization
     @material_data = material_data
     @recipe_data = recipe_data
     @merged_data = []
-    @normalized_amount_arrey = []
+    @normalized_amount_data = []
   end
 
   def material_data_recipe_data_merged()
@@ -14,6 +14,7 @@ class Normalization
       @merged_hash = material.merge(@recipe_data[i])
       @merged_data.push(@merged_hash)
     end
+    @merged_data
   end
 
   def unit_normalization_module()
@@ -21,29 +22,32 @@ class Normalization
       @two_use = data["2人前の使用量"]
       @note = data["備考"]
       nil? || pinch? || pack? || l_spoon? || s_spoon?
-      @normalized_amount_arrey.push(@normalized_amount)
+      @normalized_amount_data.push(@normalized_amount)
     end
+    @normalized_amount_data
   end
 
-  def sodium_sum()
-    sodium_sum = 0
-    @merged_data.each_with_index do |merged_data, i|
-      sodium_into_100g = merged_data["100gあたりの食塩相当量"].to_f
-      sodium_intakes = sodium_into_100g * @normalized_amount_arrey[i] * 0.01
-      sodium_sum += sodium_intakes
-    end
-    sodium_sum
-  end
+  # def sodium_sum()
+  #   sodium_sum = 0
+  #   @merged_data.each_with_index do |merged_data, i|
+  #     sodium_into_100g = merged_data["100gあたりの食塩相当量"].to_f
+  #     # p sodium_into_100g
+  #     # p @normalized_amount_data[i]
+  #     sodium_intakes = sodium_into_100g * @normalized_amount_data[i] * 0.01
+  #     sodium_sum += sodium_intakes
+  #   end
+  #   p sodium_sum
+  # end
 
-  def calorie_sum()
-    calorie_sum = 0
-    @merged_data.each_with_index do |merged_data, i|
-      calorie_in_100g = merged_data["100gあたりのカロリー"].to_f
-      calorie_intakes = calorie_in_100g * @normalized_amount_arrey[i] * 0.01
-      calorie_sum += calorie_intakes
-    end
-    calorie_sum
-  end
+  # def calorie_sum()
+  #   calorie_sum = 0
+  #   @merged_data.each_with_index do |merged_data, i|
+  #     calorie_in_100g = merged_data["100gあたりのカロリー"].to_f
+  #     calorie_intakes = calorie_in_100g * @normalized_amount_data[i] * 0.01
+  #     calorie_sum += calorie_intakes
+  #   end
+  #   p calorie_sum
+  # end
 
   def nil?()
     @normalized_amount = @two_use.sub(/g/, '').to_f if @note.nil?
@@ -87,7 +91,10 @@ class Normalization
 end
 
 if __FILE__ == $0
-  normalization = Normalization.new(Input.material_data, Input.recipe_data)
+  input = Input.new
+  input.material_data
+  input.recipe_data
+  normalization = Normalization.new(input.material_data, input.recipe_data)
   normalization.material_data_recipe_data_merged()
   normalization.unit_normalization_module()
   sodium_sum = normalization.sodium_sum()

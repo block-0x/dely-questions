@@ -1,9 +1,16 @@
-require_relative 'insert.rb'
+require_relative 'sum.rb'
 
 class Output
-  def self.output(sodium_intake_sum, calorie_intake_sum)
-  	puts "===================================================\n\n\s\s2人前のカロリーは#{calorie_intake_sum} kcalで塩分は#{sodium_intake_sum} gです\n\n==================================================="
+
+  def initialize(total_calorie_and_sodium)
+    @total_calorie_sum = total_calorie_and_sodium["2人前のカロリー"]
+    @total_sodium_sum = total_calorie_and_sodium["2人前の塩分"]
   end
+
+  def output()
+  	puts "===================================================\n\n\s\s2人前のカロリーは#{@total_calorie_sum} kcalで塩分は#{@total_sodium_sum} gです\n\n==================================================="
+  end
+
 end
 
 if __FILE__ == $0
