@@ -27,28 +27,6 @@ class Normalization
     @normalized_amount_data
   end
 
-  # def sodium_sum()
-  #   sodium_sum = 0
-  #   @merged_data.each_with_index do |merged_data, i|
-  #     sodium_into_100g = merged_data["100gあたりの食塩相当量"].to_f
-  #     # p sodium_into_100g
-  #     # p @normalized_amount_data[i]
-  #     sodium_intakes = sodium_into_100g * @normalized_amount_data[i] * 0.01
-  #     sodium_sum += sodium_intakes
-  #   end
-  #   p sodium_sum
-  # end
-
-  # def calorie_sum()
-  #   calorie_sum = 0
-  #   @merged_data.each_with_index do |merged_data, i|
-  #     calorie_in_100g = merged_data["100gあたりのカロリー"].to_f
-  #     calorie_intakes = calorie_in_100g * @normalized_amount_data[i] * 0.01
-  #     calorie_sum += calorie_intakes
-  #   end
-  #   p calorie_sum
-  # end
-
   def nil?()
     @normalized_amount = @two_use.sub(/g/, '').to_f if @note.nil?
   end
