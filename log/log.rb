@@ -2,7 +2,7 @@
 # ログ
 
 require 'logger'
-logger = Logger.new('./../log/logfile.log')
+logger = Logger.new('log/logfile.log')
 logger.level = Logger::WARN
 logger.debug("Created logger")
 logger.info("Program started")

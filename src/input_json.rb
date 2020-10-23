@@ -6,8 +6,8 @@ require 'json'
 class Input
 
   def initialize()
-    @material_json_path = "./../data/material.json"
-    @recipe_json_path = "./../data/recipe.json"
+    @material_json_path = "./data/material.json"
+    @recipe_json_path = "./data/recipe.json"
     @key = [:material_data, :recipe_data]
     @value = []
   end

@@ -82,3 +82,34 @@ F, [2020-10-23T02:44:23.886550 #5992] FATAL -- : undefined local variable or met
 /Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
 /Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
 run.rb:4:in `<main>'
+W, [2020-10-23T11:56:10.911599 #10818]  WARN -- : Nothing to do!
+F, [2020-10-23T11:56:10.912928 #10818] FATAL -- : Caught exception; exiting
+F, [2020-10-23T11:56:10.913009 #10818] FATAL -- : undefined local variable or method `path' for main:Object (NameError)
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/Users/jun/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+run.rb:4:in `<main>'
+W, [2020-10-23T12:07:16.491457 #11179]  WARN -- : Nothing to do!
+F, [2020-10-23T12:07:16.492041 #11179] FATAL -- : Caught exception; exiting
+F, [2020-10-23T12:07:16.492116 #11179] FATAL -- : undefined local variable or method `path' for main:Object (NameError)
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+./src/run.rb:4:in `require_relative'
+./src/run.rb:4:in `<main>'
+W, [2020-10-23T12:07:18.694672 #11184]  WARN -- : Nothing to do!
+F, [2020-10-23T12:07:18.700245 #11184] FATAL -- : Caught exception; exiting
+F, [2020-10-23T12:07:18.700396 #11184] FATAL -- : undefined local variable or method `path' for main:Object (NameError)
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+./src/run.rb:4:in `require_relative'
+./src/run.rb:4:in `<main>'
+W, [2020-10-23T12:07:59.155266 #11209]  WARN -- : Nothing to do!
+F, [2020-10-23T12:07:59.155357 #11209] FATAL -- : Caught exception; exiting
+F, [2020-10-23T12:07:59.155380 #11209] FATAL -- : undefined local variable or method `path' for main:Object (NameError)
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+./src/run.rb:4:in `require_relative'
+./src/run.rb:4:in `<main>'
+W, [2020-10-23T12:08:44.267705 #11228]  WARN -- : Nothing to do!
+F, [2020-10-23T12:08:44.268317 #11228] FATAL -- : Caught exception; exiting
+F, [2020-10-23T12:08:44.268390 #11228] FATAL -- : undefined local variable or method `path' for main:Object (NameError)
+/Users/jun/div/dely-questions/log/log.rb:12:in `<top (required)>'
+src/run.rb:4:in `require_relative'
+src/run.rb:4:in `<main>'
